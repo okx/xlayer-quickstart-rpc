@@ -3,7 +3,6 @@ set -e
 
 BASEDIR=$(pwd)
 WORKSPACE="$BASEDIR/testnet"
-XLAYER_NODE_IMAGE="${XLAYER_NODE_IMAGE:-okexchain/xlayer-node:v0.3.8_20240430031650_8a75c24a}"
 
 rename() {
     prefixes=("x1" "X1")

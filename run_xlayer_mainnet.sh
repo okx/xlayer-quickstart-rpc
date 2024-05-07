@@ -3,7 +3,6 @@ set -e
 
 BASEDIR=$(pwd)
 WORKSPACE="$BASEDIR/mainnet"
-XLAYER_NODE_IMAGE="${XLAYER_NODE_IMAGE:-okexchain/xlayer-node:v0.3.5_20240411084411_2455d262}"
 
 download () {
     if command -v axel &> /dev/null; then

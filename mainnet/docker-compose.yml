@@ -13,7 +13,7 @@ services:
         condition: service_healthy
       xlayer-mainnet-sync:
         condition: service_started
-    image: okexchain/xlayer-node:v0.3.5_20240411084411_2455d262
+    image: {{XLAYER_NODE_IMAGE}}
     ports:
       - 8545:8545
       - 8546:8546
@@ -34,7 +34,7 @@ services:
     depends_on:
       xlayer-mainnet-state-db:
         condition: service_healthy
-    image: okexchain/xlayer-node:v0.3.5_20240411084411_2455d262
+    image: {{XLAYER_NODE_IMAGE}}
     ports:
       - 9092:9091 # needed if metrics enabled
     environment:
@@ -96,7 +96,7 @@ services:
   xlayer-mainnet-prover:
     container_name: xlayer-mainnet-prover
     restart: unless-stopped
-    image: okexchain/xlayer-prover:origin_release_v0.3.1_20240327040854_458b8d26
+    image: {{XLAYER_PROVER_IMAGE}}
     depends_on:
       xlayer-mainnet-state-db:
         condition: service_healthy

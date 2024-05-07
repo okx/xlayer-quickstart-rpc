@@ -2,5 +2,5 @@
 
 ### usage
 ```bash
-./upload.sh testnet-release-v0.1.0 /data/osstool
+./update.sh testnet release-v0.1.0 /data/osstool
 ```
