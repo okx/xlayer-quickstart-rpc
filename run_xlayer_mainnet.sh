@@ -56,7 +56,7 @@ function unpack() {
 }
 
 function download_init_file() {
-  download https://static.okex.org/cdn/chain/xlayer/snapshot/run_xlayer_mainnet.sh run_xlayer_testnet.sh && chmod +x run_xlayer_mainnet.sh
+  download https://static.okex.org/cdn/chain/xlayer/snapshot/run_xlayer_mainnet.sh run_xlayer_mainnet.sh && chmod +x run_xlayer_mainnet.sh
   mainnetrelease=$(remote_out https://static.okex.org/cdn/chain/xlayer/snapshot/mainnet-latest-release)
   download https://static.okex.org/cdn/chain/xlayer/snapshot/"$mainnetrelease" "$mainnetrelease"
   tar -zxf "$mainnetrelease"
